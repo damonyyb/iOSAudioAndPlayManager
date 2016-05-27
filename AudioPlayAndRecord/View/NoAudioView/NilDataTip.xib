@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tl1-37-1q5" customClass="NilDataTipView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-Zz-Fa8" userLabel="fill">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7y-FN-FBs">
+                            <rect key="frame" x="300" y="0.0" width="1" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="il8-v3-SaO"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_norecord" translatesAutoresizingMaskIntoConstraints="NO" id="TEz-sE-1iH">
+                            <rect key="frame" x="275" y="150" width="50" height="50"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="暂无录音记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89z-Kv-oAV">
+                            <rect key="frame" x="249" y="208" width="102" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="TEz-sE-1iH" firstAttribute="centerX" secondItem="89z-Kv-oAV" secondAttribute="centerX" id="1vc-BT-F4Q"/>
+                        <constraint firstAttribute="centerX" secondItem="TEz-sE-1iH" secondAttribute="centerX" id="FjD-9h-2bt"/>
+                        <constraint firstItem="z7y-FN-FBs" firstAttribute="top" secondItem="mKs-Zz-Fa8" secondAttribute="top" id="NDJ-Za-deK"/>
+                        <constraint firstItem="89z-Kv-oAV" firstAttribute="top" secondItem="TEz-sE-1iH" secondAttribute="bottom" constant="8" id="PDp-9i-bmT"/>
+                        <constraint firstItem="TEz-sE-1iH" firstAttribute="top" secondItem="z7y-FN-FBs" secondAttribute="bottom" id="T73-2X-KuH"/>
+                        <constraint firstAttribute="height" secondItem="z7y-FN-FBs" secondAttribute="height" multiplier="4:1" id="YeO-gv-s0o"/>
+                        <constraint firstAttribute="centerX" secondItem="z7y-FN-FBs" secondAttribute="centerX" id="vhT-qF-gH5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mKs-Zz-Fa8" secondAttribute="trailing" id="Rls-cf-NAP"/>
+                <constraint firstItem="mKs-Zz-Fa8" firstAttribute="leading" secondItem="tl1-37-1q5" secondAttribute="leading" id="bG8-zA-L0D"/>
+                <constraint firstAttribute="bottom" secondItem="mKs-Zz-Fa8" secondAttribute="bottom" id="d0L-eG-hQG"/>
+                <constraint firstItem="mKs-Zz-Fa8" firstAttribute="top" secondItem="tl1-37-1q5" secondAttribute="top" id="fFr-Ko-QMe"/>
+            </constraints>
+            <connections>
+                <outlet property="tipTextLabel" destination="89z-Kv-oAV" id="L0M-lw-3Wd"/>
+            </connections>
+            <point key="canvasLocation" x="253" y="-561"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_norecord" width="50" height="50"/>
+    </resources>
+</document>
